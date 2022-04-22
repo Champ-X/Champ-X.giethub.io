@@ -9,7 +9,7 @@
     
     <title>
         
-            归档: 2022/4 |
+            Hexo上传Markdown格式博客文章图片不能显示 |
         
         Champ is here.
     </title>
@@ -67,7 +67,7 @@
                         </li>
                     
                         <li class="menu-item">
-                            <a class="active"
+                            <a class=""
                                href="/archives"
                             >
                                 归档
@@ -95,7 +95,7 @@
                 </li>
             
                 <li class="drawer-menu-item flex-center">
-                    <a class="active"
+                    <a class=""
                        href="/archives">归档</a>
                 </li>
             
@@ -115,45 +115,94 @@
 
                 
                     <div class="fade-in-down-animation">
-    <div class="archive-container ">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">Hexo上传Markdown格式博客文章图片不能显示</span>
+        </div>
+
         
-<div class="archive-list-container">
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.jpeg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">Champ</span>
+                        
+                            <span class="author-label">Lv1</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2022-04-22 10:01:20</span>
+        <span class="mobile">2022-04-22 10:01</span>
+    </span>
     
-        <section class="archive-item">
-            <div class="archive-item-header">
-                <span class="archive-year">2022</span>
-                <span class="archive-year-post-count">[3]</span>
-            </div>
-            <ul class="article-list">
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2022/04/22/Hexo%E4%B8%8A%E4%BC%A0Markdown%E6%A0%BC%E5%BC%8F%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0%E5%9B%BE%E7%89%87%E4%B8%8D%E8%83%BD%E6%98%BE%E7%A4%BA/"
-                        >Hexo上传Markdown格式博客文章图片不能显示</a>
-                        <span class="article-date">04-22</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2022/04/21/April/"
-                        >April</a>
-                        <span class="article-date">04-21</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2022/04/19/hello-world/"
-                        >Hello World</a>
-                        <span class="article-date">04-19</span>
-                    </li>
-                
-            </ul>
-        </section>
+    
+
+    
+    
+    
     
 </div>
 
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h1 id="Hexo上传Markdown格式博客文章图片不能显示"><a href="#Hexo上传Markdown格式博客文章图片不能显示" class="headerlink" title="Hexo上传Markdown格式博客文章图片不能显示"></a>Hexo上传Markdown格式博客文章图片不能显示</h1><h2 id="解决步骤"><a href="#解决步骤" class="headerlink" title="解决步骤"></a>解决步骤</h2><h3 id="1-安装hexo-asset-image插件"><a href="#1-安装hexo-asset-image插件" class="headerlink" title="1.安装hexo-asset-image插件"></a>1.安装hexo-asset-image插件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install https://github.com/CodeFalling/hexo-asset-image --save</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-修改根目录下-config-yml文件的配置"><a href="#2-修改根目录下-config-yml文件的配置" class="headerlink" title="2.修改根目录下_config.yml文件的配置"></a>2.修改根目录下_config.yml文件的配置</h3><p>将<code>post_asset_folder: false</code>修改为<code>post_asset_folder: true</code>。</p>
+<h3 id="3-新建文章"><a href="#3-新建文章" class="headerlink" title="3.新建文章"></a>3.新建文章</h3><p>比如新建一篇名为blog的文章</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n blog</span><br></pre></td></tr></table></figure>
+<p>这样在&#x2F;source&#x2F;_posts路径下就会有与你文章同名的文件夹&#x2F;source&#x2F;_posts&#x2F;blog，将想要插入文章的图片存在这个文件夹中。</p>
+<h3 id="4-【重点】插入文章图片的引用路径"><a href="#4-【重点】插入文章图片的引用路径" class="headerlink" title="4.【重点】插入文章图片的引用路径"></a>4.【重点】插入文章图片的引用路径</h3><p>假设在blog文件夹中已经存有图片<code>img.jpg</code>。我们的引用方式应该严格如下：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![](<span class="link">./blog/img.jpg</span>)</span><br></pre></td></tr></table></figure>
+<p><strong>注意：</strong></p>
+<blockquote>
+<p>1.一定要以相对路径写法**.&#x2F;<strong>开头。<br>2.一定要使用正斜杠</strong>&#x2F;<strong>写法，不要使用反斜杠</strong>\**写法。<br>以上经验均是笔者试错所得！！！😑😐😶</p>
+</blockquote>
+<h3 id="5-上传部署"><a href="#5-上传部署" class="headerlink" title="5.上传部署"></a>5.上传部署</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
+
+<p>搞定收工！</p>
+
+        </div>
+
+        
+
+        
+
+        
+            <div class="article-nav">
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2022/04/21/April/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">April</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
     </div>
 </div>
+
 
                 
             </div>
@@ -183,6 +232,19 @@
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-bottom-side-tools">
