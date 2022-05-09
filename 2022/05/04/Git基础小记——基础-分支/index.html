@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Champ is here.">
+    <meta name="author" content="Champ">
+    
+    <title>
+        
+            Git基础小记——基础&amp;&amp;分支 |
+        
+        Champ is here.
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/avatar.jpeg">
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"champhere.icu","root":"/","language":"zh-CN"};
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#99CCFF","avatar":"/images/avatar.jpeg","favicon":"/images/avatar.jpeg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg2.jpg","description":"\"I can do all things.\""},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":true}}},"local_search":{"enable":false,"preload":false},"code_copy":{"enable":false,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+  </script>
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                Champ is here.
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">Git基础小记——基础&amp;&amp;分支</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.jpeg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">Champ</span>
+                        
+                            <span class="author-label">Lv2</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2022-05-04 23:22:17</span>
+        <span class="mobile">2022-05-04 23:22</span>
+    </span>
+    
+    
+
+    
+    
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h1 id="Git基础小记——基础-amp-amp-分支"><a href="#Git基础小记——基础-amp-amp-分支" class="headerlink" title="Git基础小记——基础&amp;&amp;分支"></a>Git基础小记——基础&amp;&amp;分支</h1><h2 id="Chapter-2-基础-amp-amp-分支"><a href="#Chapter-2-基础-amp-amp-分支" class="headerlink" title="Chapter 2 基础&amp;&amp;分支"></a>Chapter 2 基础&amp;&amp;分支</h2><h3 id="2-1-记录更新到仓库"><a href="#2-1-记录更新到仓库" class="headerlink" title="2.1 记录更新到仓库"></a>2.1 记录更新到仓库</h3><h4 id="1-生命周期图-lifecycle"><a href="#1-生命周期图-lifecycle" class="headerlink" title="(1).  生命周期图 lifecycle"></a>(1).  生命周期图 lifecycle</h4><p>下图的文件<strong>生命周期图</strong>可以清晰的看出文件在Git中的状态。工作目录下的每一个文件都不外乎两种状态：<strong>已跟踪</strong>或<strong>未跟踪</strong>。已跟踪的文件是指那些被纳入了版本控制的文件，在上一次快照中有它们的记录，在工作一段时间后， 它们的状态可能是<strong>未修改</strong>，<strong>已修改</strong>或<strong>已暂存</strong>。已跟踪的文件就是 Git 已经知道的文件。编辑过某些文件之后，由于自上次提交后你对它们做了修改，Git 将它们标记为已修改文件。 在工作时，你可以选择性地将这些修改过的文件<strong>放入暂存区</strong>（也就是<code>git add</code>），然后<strong>提交所有已暂存的修改</strong>(也就是<code>git commit</code>)，如此反复。</p>
+<p>   <img src="/2022/05/04/Git%E5%9F%BA%E7%A1%80%E5%B0%8F%E8%AE%B0%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80-%E5%88%86%E6%94%AF/Blog\champ_blog\source_posts\Git基础小记——基础-分支\lifecycle.png"></p>
+<h4 id="2-文件状态"><a href="#2-文件状态" class="headerlink" title="(2). 文件状态"></a>(2). <strong>文件状态</strong></h4><p>用 <code>git status</code> 命令查看哪些文件处于什么状态。</p>
+<table>
+<thead>
+<tr>
+<th align="center">Status</th>
+<th align="center">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>Untracked files</strong></td>
+<td align="center">未跟踪的文件，Git 不会自动将其纳入跟踪范围</td>
+</tr>
+<tr>
+<td align="center"><strong>Changes to be committed</strong></td>
+<td align="center">已暂存状态，此时提交，该文件在你运行 <code>git add</code> 时的版本将被留存</td>
+</tr>
+<tr>
+<td align="center"><strong>Changes not staged for commit</strong></td>
+<td align="center">已跟踪文件的内容发生了变化，但还没有放到暂存区</td>
+</tr>
+</tbody></table>
+<p>   <code>git status</code> 命令的输出十分详细。<code>status -s</code> 缩短状态命令的输出，这样可以以简洁的方式查看更改。</p>
+<table>
+<thead>
+<tr>
+<th align="center"><strong>Symbol</strong></th>
+<th align="center"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>??</strong></td>
+<td align="center">新添加的<strong>未跟踪文件</strong>前面有 <code>??</code>标记</td>
+</tr>
+<tr>
+<td align="center"><strong>A</strong></td>
+<td align="center"><strong>Add****新添加</strong>到暂存区中的文件前面有 <code>A</code> 标记</td>
+</tr>
+<tr>
+<td align="center"><strong>M</strong></td>
+<td align="center"><strong>Modified已修改</strong>但尚未暂存有 <code>M </code>标记</td>
+</tr>
+<tr>
+<td align="center"><strong>MM</strong></td>
+<td align="center">文件已修改，暂存后又作了修改，因此该文件的修改中既有已暂存的部分，又有未暂存的部分</td>
+</tr>
+</tbody></table>
+<h4 id="3-忽略文件"><a href="#3-忽略文件" class="headerlink" title="(3). 忽略文件"></a>(3). <strong>忽略文件</strong></h4><p>有些文件无需纳入 Git 的管理，也不希望它们总出现在未跟踪文件列表。通常都是些自动生成的文件，比如日志文件，或者编译过程中创建的临时文件等。在这种情况下，可以创建一个名为 <code>.gitignore</code> 的文件，列出要忽略的<strong>文件的模式</strong>。<code>.gitignore</code>例子：</p>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> .gitignore</span><br><span class="line">*.[oa] <span class="comment"># 告诉 Git 忽略所有以 .o 或 .a 结尾的文件</span></span><br><span class="line">*~ <span class="comment"># 告诉 Git 忽略所有以波浪符结尾的文件，许多文本编辑软件都用这样的文件名保存副本</span></span><br></pre></td></tr></table></figure>
+
+<p>   GitHub有一个十分详细的针对数十种项目及语言的 <code>.gitignore</code> 文件列表， 你可以在<a class="link" target="_blank" rel="noopener" href="https://github.com/github/gitignore">这里<i class="fas fa-external-link-alt"></i></a>找到它😮。</p>
+<h4 id="4-查看已暂存和未暂存的修改"><a href="#4-查看已暂存和未暂存的修改" class="headerlink" title="(4). 查看已暂存和未暂存的修改"></a>(4). <strong>查看已暂存和未暂存的修改</strong></h4><p>   <code>git diff</code>命令比较的是工作目录中当前文件和暂存区域快照之间的差异，也就是<strong>修改之后</strong>还<strong>没有暂存(not add)<strong>起来的变化内容，简单来说就是</strong>暂存（<code>git add</code>）前后</strong>。<br>   <code>git diff --staged</code>命令查看已暂存的将要添加到下次提交里的内容，这条命令将比对<strong>已暂存文件(added)<strong>与最后一次</strong>提交的文件（committed）</strong>差异。</p>
+<p>   <em><strong>虽然但是，这些在IDE里很直观，何苦折磨自己呢。🙄🙄</strong></em></p>
+<h4 id="5-提交更新"><a href="#5-提交更新" class="headerlink" title="(5).提交更新"></a>(5).提交更新</h4><p>   现在的暂存区已经准备就绪，可以提交了。 <strong>在此之前，请务必确认还有什么已修改或新建的文件还没有 <code>git add</code> 过</strong>， 否则提交的时候不会记录这些尚未暂存的变化。每次准备提交前，先用 <code>git status</code> 看下，你所需要的文件是不是都已暂存起来了。</p>
+<h4 id="6-移除文件"><a href="#6-移除文件" class="headerlink" title="(6).移除文件"></a>(6).移除文件</h4><p>   要从 Git 中移除某个文件，就必须要从<strong>已跟踪文件清单</strong>中移除（确切地说，是从<strong>暂存区域</strong>移除），然后提交。 用 <code>git rm</code> 命令完成此项工作。如果要删除<strong>之前修改过</strong>或<strong>已经放到暂存区的文件</strong>，则必须使用强制删除选项 <code>-f</code>。这是一种安全特性，用于防止误删尚未添加到快照的数据，这样的数据不能被 Git 恢复。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">rm</span> 1.txt</span><br><span class="line">git <span class="built_in">rm</span> -r src <span class="comment"># 删除文件夹</span></span><br><span class="line">git <span class="built_in">rm</span> -rf src <span class="comment"># 强制(force)删除文件夹</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="7-移动文件"><a href="#7-移动文件" class="headerlink" title="(7). 移动文件"></a>(7). 移动文件</h4><p>   Git 的 <code>git mv</code> 命令实现移动。要在 Git 中<strong>对文件改名</strong>，可以这么做：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">mv</span> file_from file_to</span><br></pre></td></tr></table></figure>
+
+<p>   运行 <code>git mv</code> 就相当于运行了下面三条命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mv</span> file_from file_to</span><br><span class="line">git <span class="built_in">rm</span> file_from</span><br><span class="line">git add file_to</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-2-查看提交历史"><a href="#2-2-查看提交历史" class="headerlink" title="2.2 查看提交历史"></a>2.2 查看提交历史</h3>
+        </div>
+
+        
+
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2022/05/09/pinkBubble/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">pinkBubble</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2022/05/04/basicHTML/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">basicHTML</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span>
+              -
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">Champ</a>
+        </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+
+
+
+<div class="post-scripts">
+    
+</div>
+
+
+
+</body>
+</html>
