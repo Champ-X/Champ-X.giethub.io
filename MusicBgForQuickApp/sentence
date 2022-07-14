@@ -1,0 +1,389 @@
+[
+  {
+    type: '金句',
+    collect: 0,
+    report: 0,
+    icon: '../../assets/images/detail_imgs/user5.jpg',
+    content:
+      '使人們寧願相信謬誤，而不願熱愛真理的原因，不僅由於探索真理是艱苦的，而且是由於謬誤更能迎合人類某些惡劣的天性。',
+    title: '《培根論人生》',
+    isFavor: false,
+    favor: 2000,
+    bgcolor: ['#dc7c70', '#f0a595']
+  },
+  {
+    type: '金句',
+    collect: 0,
+    report: 0,
+    icon: '../../assets/images/detail_imgs/user5.jpg',
+    content:
+      '故天將降大任於斯人也，必先苦其心誌，勞其筋骨，餓其體膚，空乏其身，行拂亂其所為，所以動心忍性，曾益其所不能。',
+    author: '孟子',
+    isFavor: false,
+    favor: 12345,
+    bgcolor: ['#dc7c70', '#f0a595']
+  },
+  {
+    type: '金句',
+    collect: 0,
+    report: 0,
+    icon: '../../assets/images/detail_imgs/user5.jpg',
+    content: '你是我的一切，而別人只不過是從我生命邊上輕輕擦過的路人。',
+    title: '《一個陌生女人的來信》',
+    author: '茨威格',
+    isFavor: false,
+    favor: 2568,
+    bgcolor: ['#dc7c70', '#f0a595']
+  },
+  {
+    type: '金句',
+    collect: 0,
+    report: 0,
+    icon: '../../assets/images/detail_imgs/user5.jpg',
+    content:
+      '那時候，你還很年輕，人人都說你美。現在，我是特意來告訴你，對我來說，我覺得現在你比年輕的時候更美。與你那時的麵貌相比，我更愛你現在備受摧殘的麵容。',
+    title: '《情人》',
+    author: '瑪格麗特·杜拉斯',
+    isFavor: false,
+    favor: 2000,
+    bgcolor: ['#dc7c70', '#f0a595']
+  },
+  {
+    type: '金句',
+    collect: 0,
+    report: 0,
+    icon: '../../assets/images/detail_imgs/user5.jpg',
+    content:
+      '這麼多年，我一直在學習一件事情，就是不回頭，只為自己沒有做過的事情後悔，不為自己做過的事情後悔。人生每一步行來，都是需要付出代價的。我得到了我想要的一些，失去了我不想失去的一些。可這世上的蕓蕓眾生，誰又不是這樣呢？',
+    title: '《那些回不去的年少時光》',
+    author: '桐華',
+    isFavor: false,
+    favor: 2000,
+    bgcolor: ['#dc7c70', '#f0a595']
+  },
+  {
+    type: '金句',
+    collect: 0,
+    report: 0,
+    icon: '../../assets/images/detail_imgs/user5.jpg',
+    content: '人生如逆旅，我亦是行人。',
+    title: '《臨江仙》',
+    author: '蘇軾',
+    isFavor: false,
+    favor: 2000,
+    bgcolor: ['#dc7c70', '#f0a595']
+  },
+  {
+    type: '金句',
+    collect: 0,
+    report: 0,
+    icon: '../../assets/images/detail_imgs/user5.jpg',
+    content: '向死而生的意義是：當你無限接近死亡，才能深切體會生的意義。',
+    title: '《存在與時間》',
+    author: '馬丁·海德格爾',
+    isFavor: false,
+    favor: 2000,
+    bgcolor: ['#dc7c70', '#f0a595']
+  },
+  {
+    type: '金句',
+    collect: 0,
+    report: 0,
+    icon: '../../assets/images/detail_imgs/user5.jpg',
+    content: '存在即合理。',
+    title: '《法哲學原理》',
+    author: '黑格爾',
+    isFavor: false,
+    favor: 2000,
+    bgcolor: ['#dc7c70', '#f0a595']
+  },
+  {
+    type: '金句',
+    collect: 0,
+    report: 0,
+    icon: '../../assets/images/detail_imgs/user5.jpg',
+    content: '我只願麵朝大海，春暖花開。',
+    title: '《麵朝大海，春暖花開》',
+    author: '海子',
+    isFavor: false,
+    favor: 2000,
+    bgcolor: ['#dc7c70', '#f0a595']
+  },
+  {
+    type: '金句',
+    collect: 0,
+    report: 0,
+    icon: '../../assets/images/detail_imgs/user5.jpg',
+    content:
+      '我們一直尋找的，卻是自己原本早已擁有的；我們總是東張西望，唯獨漏了自己想要的，這就是我們至今難以如願以償的原因。',
+    title: '《理想國》',
+    author: '柏拉圖',
+    isFavor: false,
+    favor: 2000,
+    bgcolor: ['#dc7c70', '#f0a595']
+  },
+  {
+    type: '金句',
+    collect: 0,
+    report: 0,
+    icon: '../../assets/images/detail_imgs/user5.jpg',
+    content:
+      '情不知所起，一往而深，生者可以死，死者可以生。生而不可與死，死而不可復生者，皆非情之至也。',
+    title: '《牡丹亭》',
+    author: '湯顯祖',
+    isFavor: false,
+    favor: 2000,
+    bgcolor: ['#dc7c70', '#f0a595']
+  },
+  {
+    type: '金句',
+    collect: 0,
+    report: 0,
+    icon: '../../assets/images/detail_imgs/user5.jpg',
+    content:
+      '世界上最寬闊的是海洋，比海洋更寬闊的是天空，比天空更寬闊的是人的心靈。',
+    title: '《悲慘世界》',
+    author: '雨果',
+    isFavor: false,
+    favor: 2000,
+    bgcolor: ['#dc7c70', '#f0a595']
+  },
+  {
+    type: '金句',
+    collect: 0,
+    report: 0,
+    icon: '../../assets/images/detail_imgs/user5.jpg',
+    content:
+      '當你拚命想完成一件事的時候，你就不再是別人的對手，或者說得更確切一些，別人就不再是你的對手了，不管是誰，只要下了這個決心，他就會立刻覺得增添了無窮的力量，而他的視野也隨之開闊了。',
+    title: '《基督山伯爵》',
+    author: '大仲馬',
+    isFavor: false,
+    favor: 2000,
+    bgcolor: ['#dc7c70', '#f0a595']
+  },
+  {
+    type: '金句',
+    collect: 0,
+    report: 0,
+    icon: '../../assets/images/detail_imgs/user5.jpg',
+    content: '勇者憤怒，抽刃向更強者；怯者憤怒，卻抽刃向更弱者。',
+    title: '《華蓋集·雜感》',
+    author: '魯迅',
+    isFavor: false,
+    favor: 2000,
+    bgcolor: ['#dc7c70', '#f0a595']
+  },
+  {
+    type: '金句',
+    collect: 0,
+    report: 0,
+    icon: '../../assets/images/detail_imgs/user5.jpg',
+    content:
+      '人生不過如此，且行且珍惜。自己永遠是自己的主角，不要總在別人的戲劇裏充當着配角。',
+    title: '《人生不過如此》',
+    author: '林語堂',
+    isFavor: false,
+    favor: 2000,
+    bgcolor: ['#dc7c70', '#f0a595']
+  },
+  {
+    type: '金句',
+    collect: 0,
+    report: 0,
+    icon: '../../assets/images/detail_imgs/user5.jpg',
+    content: '不要為那些不願在你身上花費時間的人而浪費你的時間。',
+    title: '《飄》',
+    author: '瑪格麗特·米切爾',
+    isFavor: false,
+    favor: 2000,
+    bgcolor: ['#dc7c70', '#f0a595']
+  },
+  {
+    type: '金句',
+    collect: 0,
+    report: 0,
+    icon: '../../assets/images/detail_imgs/user5.jpg',
+    content:
+      '我願意深深地紮入生活，吮盡生活的骨髓，過得紮實，簡單，把一切不屬於生活的內容剔除得幹凈利落，把生活逼到絕處，用最基本的形式，簡單，簡單，再簡單。',
+    title: '《瓦爾登湖》',
+    author: '梭羅',
+    isFavor: false,
+    favor: 2000,
+    bgcolor: ['#dc7c70', '#f0a595']
+  },
+  {
+    type: '金句',
+    collect: 0,
+    report: 0,
+    icon: '../../assets/images/detail_imgs/user5.jpg',
+    content: '醉過才知酒濃，愛過才知情重。你不能做我的詩，正如我不能做你的夢。',
+    title: '《夢與詩》',
+    author: '胡適',
+    isFavor: false,
+    favor: 584,
+    bgcolor: ['#dc7c70', '#f0a595']
+  },
+  {
+    type: '金句',
+    collect: 0,
+    report: 0,
+    icon: '../../assets/images/detail_imgs/user5.jpg',
+    content: '要是愛你愛的少些，話就可以說的多些了。',
+    title: '《傲慢與偏見》',
+    author: '簡·奧斯汀',
+    isFavor: false,
+    favor: 18445,
+    bgcolor: ['#dc7c70', '#f0a595']
+  },
+  {
+    type: '金句',
+    collect: 0,
+    report: 0,
+    icon: '../../assets/images/detail_imgs/user5.jpg',
+    content: '人生實如鐘擺，在痛苦與倦怠之間擺動。',
+    title: '《作為意誌和表象的世界》',
+    author: '叔本華',
+    isFavor: false,
+    favor: 2000,
+    bgcolor: ['#dc7c70', '#f0a595']
+  },
+  {
+    type: '金句',
+    collect: 0,
+    report: 0,
+    icon: '../../assets/images/detail_imgs/user5.jpg',
+    content:
+      '故事的開頭總是這樣，適逢其會，猝不及防。故事的結局總是這樣，花開兩朵，天各一方。',
+    title: '《從你的全世界路過》',
+    author: '張嘉佳',
+    isFavor: false,
+    favor: 2000,
+    bgcolor: ['#dc7c70', '#f0a595']
+  },
+  {
+    type: '金句',
+    collect: 0,
+    report: 0,
+    icon: '../../assets/images/detail_imgs/user5.jpg',
+    content: '我將於茫茫人海中訪我唯一靈魂之伴侶；得之，我幸；不得，我命。',
+    title: '《致梁啟超》',
+    author: '徐誌摩',
+    isFavor: false,
+    favor: 2000,
+    bgcolor: ['#dc7c70', '#f0a595']
+  },
+  {
+    type: '金句',
+    collect: 0,
+    report: 0,
+    icon: '../../assets/images/detail_imgs/user5.jpg',
+    content:
+      '只有經歷過地獄般的磨礪，才能練就創造天堂的力量；只有流過血的手指，才能彈出世間的絕響。',
+    title: '《飛鳥集》',
+    author: '泰戈爾',
+    isFavor: false,
+    favor: 2000,
+    bgcolor: ['#dc7c70', '#f0a595']
+  },
+  {
+    type: '金句',
+    collect: 0,
+    report: 0,
+    icon: '../../assets/images/detail_imgs/user5.jpg',
+    content:
+      '假如你避免不了，就得去忍受。不能忍受生命中註定要忍受的事情，就是軟弱和愚蠢的表現。',
+    title: '《簡愛》',
+    author: '勃朗特',
+    isFavor: false,
+    favor: 2000,
+    bgcolor: ['#dc7c70', '#f0a595']
+  },
+  {
+    type: '金句',
+    collect: 0,
+    report: 0,
+    icon: '../../assets/images/detail_imgs/user5.jpg',
+    content: '對於世界而言，你是一個人；但是對於某個人，你是他的整個世界。',
+    title: '《雙城記》',
+    author: '狄更斯',
+    isFavor: false,
+    favor: 2000,
+    bgcolor: ['#dc7c70', '#f0a595']
+  },
+  {
+    type: '金句',
+    collect: 0,
+    report: 0,
+    icon: '../../assets/images/detail_imgs/user5.jpg',
+    content:
+      '人的心只容得下一定程度的絕望，海綿已經吸夠了水，即使大海從它上麵流過，也不能再給它增添一滴水了。',
+    title: '《巴黎聖母院》',
+    author: '維克多·雨果',
+    isFavor: false,
+    favor: 2000,
+    bgcolor: ['#dc7c70', '#f0a595']
+  },
+  {
+    type: '金句',
+    collect: 0,
+    report: 0,
+    icon: '../../assets/images/detail_imgs/user5.jpg',
+    content:
+      '真正有知識的人的成長過程，就像麥穗的成長過程：麥穗空的時候，麥子長得很快，麥穗驕傲地高高昂起，但是，麥穗成熟飽滿時，它們開始謙虛，垂下麥芒。',
+    title: '《蒙田隨筆全集》',
+    author: '蒙田',
+    isFavor: false,
+    favor: 2000,
+    bgcolor: ['#dc7c70', '#f0a595']
+  },
+  {
+    type: '金句',
+    collect: 0,
+    report: 0,
+    icon: '../../assets/images/detail_imgs/user5.jpg',
+    content:
+      '我這麼愛他，并不是因為他長的英俊，而是因為他比我更像我自己。不管我們的靈魂是什麼做的，他的和我的是完全一樣的。',
+    title: '《呼嘯山莊》',
+    author: '艾米莉·勃朗特',
+    isFavor: false,
+    favor: 2000,
+    bgcolor: ['#dc7c70', '#f0a595']
+  },
+  {
+    type: '金句',
+    collect: 0,
+    report: 0,
+    icon: '../../assets/images/detail_imgs/user5.jpg',
+    content: '偉大的藝術品不必追隨潮流，他本身就能引領潮流。',
+    title: '《喬布斯傳》',
+    author: '喬布斯',
+    isFavor: false,
+    favor: 2000,
+    bgcolor: ['#dc7c70', '#f0a595']
+  },
+  {
+    type: '金句',
+    collect: 0,
+    report: 0,
+    icon: '../../assets/images/detail_imgs/user5.jpg',
+    content:
+      '你是一樹一樹的花開，是燕在梁間呢喃。你是愛，是暖，是希望，你是人間的四月天。',
+    title: '《你是那人間的四月天》',
+    author: '林徽因',
+    isFavor: false,
+    favor: 2000,
+    bgcolor: ['#dc7c70', '#f0a595']
+  },
+  {
+    type: '金句',
+    collect: 0,
+    report: 0,
+    icon: '../../assets/images/detail_imgs/user5.jpg',
+    content: '如果你想知道周圍有多麼黑暗，你就得留意遠處的微弱光線。',
+    title: '《看不見的城市》',
+    author: '卡爾維諾',
+    isFavor: false,
+    favor: 2000,
+    bgcolor: ['#dc7c70', '#f0a595']
+  }
+]
