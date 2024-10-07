@@ -239,6 +239,7 @@ div{
 }
 
 .nine p {
+    top: 10% !important;
     font-size: 3.5rem;
     font-weight: lighter;
 }

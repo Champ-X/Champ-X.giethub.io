@@ -341,7 +341,7 @@ const animationTimeline = () => {
         .to(".container", 3.1, {
             visibility: "visible"
         })
-        .from(".one", 2.7, {
+        .from(".one", 3.3, {
             opacity: 0,
             y: 10
         })
