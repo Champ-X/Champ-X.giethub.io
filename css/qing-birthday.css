@@ -238,8 +238,11 @@ div{
     margin: 10px 0 0;
 }
 
+.nine {
+    margin-top: -50px;
+}
+
 .nine p {
-    top: 10% !important;
     font-size: 3.5rem;
     font-weight: lighter;
 }
