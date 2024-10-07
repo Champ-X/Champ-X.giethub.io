@@ -16,7 +16,7 @@ html,body{
 /*}*/
 
 div{
-    font-family: "隶书", KaiTi, 黑体;
+    font-family: KaiTi, "隶书", 黑体;
     /*color: #0fa98f;*/
     color: #f47983;
 }
@@ -140,8 +140,8 @@ div{
 .six .hat {
     position: absolute;
     width: 120px;
-    top: -35px;
-    left: 41.5%;
+    top: -90px !important;
+    left: 41.5% !important;
     /* transform: scale(0.1); */
 }
 
@@ -304,7 +304,7 @@ div{
     }
 
     .wish h5 {
-        font-size: 1.4rem;
+        font-size: 2.0rem;
     }
 
     .nine p {
