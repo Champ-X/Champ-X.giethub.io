@@ -4,6 +4,7 @@ html,body{
     height:100%;
     overflow:hidden;
     background:linear-gradient(to left top, #177cb0,pink);
+    /* background: linear-gradient(to left top, #FF8570 0%, #418CB7 100%); */
 }
 
 /*html {*/
@@ -140,7 +141,7 @@ div{
 .six .hat {
     position: absolute;
     width: 120px;
-    top: -90px !important;
+    top: -150px !important;
     left: 41.5% !important;
     /* transform: scale(0.1); */
 }
