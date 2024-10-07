@@ -3,8 +3,8 @@ html,body{
     width:100%;
     height:100%;
     overflow:hidden;
-    background:linear-gradient(to left top, #177cb0,pink);
-    /* background: linear-gradient(to left top, #FF8570 0%, #418CB7 100%); */
+    /* background:linear-gradient(to left top, #177cb0,pink); */
+    background: linear-gradient(to right bottom, #FF8570 0%, #418CB7 100%);
 }
 
 /*html {*/
@@ -18,8 +18,8 @@ html,body{
 
 div{
     font-family: KaiTi, "隶书", 黑体;
-    /*color: #0fa98f;*/
-    color: #f47983;
+    /* color: #0fa98f; */
+    color: #db5517;
 }
 
 .container {
@@ -64,7 +64,7 @@ div{
 }
 
 .two {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: lighter;
 }
 
@@ -76,7 +76,7 @@ div{
     font-size: 30px;
     width: 80%;
     margin: 0 auto;
-    border: 3px solid #aaa;
+    border: 3px solid #0dde8a;
     border-radius: 5px;
     padding: 10px;
     position: relative;
@@ -227,14 +227,14 @@ div{
 }
 
 .wish-hbd {
-    font-size: 3em;
+    font-size: 5em;
     margin: 0;
     text-transform: uppercase;
 }
 
 .wish h5 {
     font-weight: lighter;
-    font-size: 2rem;
+    font-size: 3rem;
     margin: 10px 0 0;
 }
 

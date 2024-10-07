@@ -338,20 +338,20 @@ const animationTimeline = () => {
     const tl = new TimelineMax();
 
     tl
-        .to(".container", 0.1, {
+        .to(".container", 2.1, {
             visibility: "visible"
         })
-        .from(".one", 0.7, {
+        .from(".one", 2.7, {
             opacity: 0,
             y: 10
         })
-        .from(".two", 0.4, {
+        .from(".two", 1.4, {
             opacity: 0,
             y: 10
         })
         .to(
             ".one",
-            0.7,
+            2.7,
             {
                 opacity: 0,
                 y: 10
@@ -360,32 +360,32 @@ const animationTimeline = () => {
         )
         .to(
             ".two",
-            0.7,
+            1.7,
             {
                 opacity: 0,
                 y: 10
             },
             "-=1"
         )
-        .from(".three", 0.7, {
+        .from(".three", 1.7, {
             opacity: 0,
             y: 10
             // scale: 0.7
         })
         .to(
             ".three",
-            0.7,
+            1.7,
             {
                 opacity: 0,
                 y: 10
             },
             "+=2"
         )
-        .from(".four", 0.7, {
+        .from(".four", 1.7, {
             scale: 0.2,
             opacity: 0
         })
-        .from(".fake-btn", 0.3, {
+        .from(".fake-btn", 1.3, {
             scale: 0.2,
             opacity: 0
         })
@@ -402,7 +402,7 @@ const animationTimeline = () => {
         })
         .to(
             ".four",
-            0.5,
+            1.5,
             {
                 scale: 0.2,
                 opacity: 0,
@@ -532,7 +532,7 @@ const animationTimeline = () => {
             {
                 scale: 1,
                 rotationY: 0,
-                color: "#ff69b4",
+                color: "#ff4c54",
                 ease: Expo.easeOut
             },
             0.1,
@@ -550,13 +550,13 @@ const animationTimeline = () => {
         )
         .staggerTo(
             ".eight svg",
-            1.5,
+            0.5,
             {
                 visibility: "visible",
                 opacity: 0,
                 scale: 80,
-                repeat: 3,
-                repeatDelay: 1.4
+                repeat: 10,
+                repeatDelay: 1.2
             },
             0.3
         )
